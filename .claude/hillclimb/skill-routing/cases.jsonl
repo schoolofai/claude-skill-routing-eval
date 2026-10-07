@@ -51,3 +51,13 @@
 {"prompt_id": "c52", "prompt": "Did anything change in src/queue.py since v1.3.0?", "expected": "none", "tags": ["none", "lookalike", "hard"]}
 {"prompt_id": "c53", "prompt": "Before Dana reviews, give her the lay of the land for this branch.", "expected": "pr-description", "tags": ["pr-description", "lookalike", "hard"]}
 {"prompt_id": "c54", "prompt": "Users upgrading from 1.3 need to know what's different. Write that up.", "expected": "release-notes", "tags": ["release-notes", "lookalike", "hard"]}
+{"prompt_id": "c55", "prompt": "What's new for users in 1.4? List every fix so they can plan the upgrade.", "expected": "release-notes", "tags": ["release-notes", "between-two", "hard"]}
+{"prompt_id": "c56", "prompt": "Give me three upbeat sentences about 1.4 for the homepage banner.", "expected": "announce", "tags": ["announce", "between-two", "hard"]}
+{"prompt_id": "c57", "prompt": "Summarize everything since the last release for the eng team's Friday sync.", "expected": "weekly-update", "tags": ["weekly-update", "between-two", "hard"]}
+{"prompt_id": "c58", "prompt": "Summarize everything since the last release for customers, grouped into new and fixed.", "expected": "release-notes", "tags": ["release-notes", "between-two", "hard"]}
+{"prompt_id": "c59", "prompt": "Log the retry fix from this branch for other developers, one line with the PR number.", "expected": "changelog", "tags": ["changelog", "between-two", "hard"]}
+{"prompt_id": "c60", "prompt": "The 1.4 notes are done. Now write the LinkedIn post that links to them.", "expected": "announce", "tags": ["announce", "between-two", "hard"]}
+{"prompt_id": "c61", "prompt": "Write up the breaking change in this branch for the reviewer, not for users.", "expected": "pr-description", "tags": ["pr-description", "between-two", "hard"]}
+{"prompt_id": "c62", "prompt": "Add the removal of flush() to the unreleased section. The release notes come later.", "expected": "changelog", "tags": ["changelog", "between-two", "hard"]}
+{"prompt_id": "c63", "prompt": "Tell the team what we released on Tuesday and what else got done this week.", "expected": "weekly-update", "tags": ["weekly-update", "between-two", "hard"]}
+{"prompt_id": "c64", "prompt": "Explain this branch's changes so Sam can approve the PR. Don't touch the changelog.", "expected": "pr-description", "tags": ["pr-description", "between-two", "hard"]}

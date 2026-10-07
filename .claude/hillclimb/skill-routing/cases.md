@@ -310,3 +310,53 @@ Before Dana reviews, give her the lay of the land for this branch.
 ```
 Users upgrading from 1.3 need to know what's different. Write that up.
 ```
+
+## c55 → release-notes  (user-written, between two skills)
+```
+What's new for users in 1.4? List every fix so they can plan the upgrade.
+```
+
+## c56 → announce  (user-written, between two skills)
+```
+Give me three upbeat sentences about 1.4 for the homepage banner.
+```
+
+## c57 → weekly-update  (user-written, between two skills)
+```
+Summarize everything since the last release for the eng team's Friday sync.
+```
+
+## c58 → release-notes  (user-written, between two skills)
+```
+Summarize everything since the last release for customers, grouped into new and fixed.
+```
+
+## c59 → changelog  (user-written, between two skills)
+```
+Log the retry fix from this branch for other developers, one line with the PR number.
+```
+
+## c60 → announce  (user-written, between two skills)
+```
+The 1.4 notes are done. Now write the LinkedIn post that links to them.
+```
+
+## c61 → pr-description  (user-written, between two skills)
+```
+Write up the breaking change in this branch for the reviewer, not for users.
+```
+
+## c62 → changelog  (user-written, between two skills)
+```
+Add the removal of flush() to the unreleased section. The release notes come later.
+```
+
+## c63 → weekly-update  (user-written, between two skills)
+```
+Tell the team what we released on Tuesday and what else got done this week.
+```
+
+## c64 → pr-description  (user-written, between two skills)
+```
+Explain this branch's changes so Sam can approve the PR. Don't touch the changelog.
+```

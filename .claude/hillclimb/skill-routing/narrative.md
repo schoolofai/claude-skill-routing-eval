@@ -12,3 +12,11 @@ Best so far: v1. All 17 baseline Bash-first misses disappeared; no wrong-skill p
 | v1 | 100% | 100% | 100% | 100% | 100% |
 
 Baseline passes all 10 'none' look-alikes and misses both firing ones (c53, c54: Bash-first, 3/3). v1 passes all 12, including the 10 look-alikes, so the 'use this first, before git' wording did not cause false triggers.
+
+## 63 cases (+10 between-two-skills, c55-c64)
+| variant | all 63 | train (30) | test (33) | orig 41 | look-alikes 12 | between 10 |
+|---|---|---|---|---|---|---|
+| baseline | 78.3% | 75.6% | 80.8% | 86.2% | 83.3% | 40.0% |
+| v1 | 100% | 100% | 100% | 100% | 100% | 100% |
+
+Baseline missed 6 of 10 between-two cases 3/3 (c55, c56, c57, c60, c61, c64): five Bash-first, c56 text-only. No wrong-skill picks in either variant.
