@@ -74,8 +74,8 @@ opts = ClaudeAgentOptions(
 ```
 
 ```
-{"skill": "pr-description", "first_tool": "Skill", "model": "claude-sonnet-5-5", "cost_usd": 0.0237532, "latency_s": 4.8}
-{"skill": "weekly-update", "first_tool": "Skill", "model": "claude-sonnet-5-5", "cost_usd": 0.0237892, "latency_s": 3.21}
+{"skill": "pr-description", "first_tool": "Skill", "model": "claude-sonnet-5-5", "cost_usd": 0.022788199999999998, "latency_s": 3.52}
+{"skill": "weekly-update", "first_tool": "Skill", "model": "claude-sonnet-5-5", "cost_usd": 0.022818199999999997, "latency_s": 3.17}
 ```
 
 These are the round-one descriptions, so both requests reach the right skill.
@@ -86,21 +86,27 @@ The original descriptions are saved in `.claude/hillclimb/skill-routing/baseline
 
 ```markdown
 ---
-name: weekly-update
-description: Summarizes recent work.
+name: pr-description
+description: Writes PR descriptions.
 ---
 ```
 
 ```bash
 cp -r .claude/hillclimb/skill-routing/baseline/skills/. .claude/skills/
-.venv/bin/python scripts/which_skill.py "What did we merge this week? Just a quick list for standup."
+for i in 1 2 3; do
+  .venv/bin/python scripts/which_skill.py "Summarize what this branch changes so the reviewer knows where to look."
+done
 ```
 
 ```
-{"skill": null, "first_tool": "Bash", "model": "claude-sonnet-5-5", "cost_usd": 0.0229632, "latency_s": 3.85}
+{"skill": null, "first_tool": "Bash", "model": "claude-sonnet-5-5", "cost_usd": 0.0054448000000000005, "latency_s": 4.3}
+{"skill": null, "first_tool": "Bash", "model": "claude-sonnet-5-5", "cost_usd": 0.0054448000000000005, "latency_s": 10.15}
+{"skill": null, "first_tool": "Bash", "model": "claude-sonnet-5-5", "cost_usd": 0.0054448000000000005, "latency_s": 5.29}
 ```
 
-No skill fired, and Claude's first move was a shell command. That is the bug the whole video measures.
+No skill fired in any of the three runs. Each time, Claude's first move was a shell command. That is the bug the whole video measures. Case c04 asks for a PR description without saying "PR description".
+
+A single request is only an anecdote. In the filmed baseline, the standup request from the video missed 3 times out of 3. In our fresh-clone test it picked the right skill 4 times out of 4. That is why the eval runs every case 3 times.
 
 ### 4. Check the grader before trusting it ([video 5:24](https://youtu.be/VIDEO_ID?t=324))
 
@@ -149,19 +155,19 @@ harness approved: 746198fc100a
 3 runs to do (0 already done) on model=sonnet effort=low
   1/3 done, 4s
   2/3 done, 4s
-  3/3 done, 9s
+  3/3 done, 10s
 correct 33.3% +/- 65.3% (95% CI over 3 cases, 3 scored runs); errors: 0 failed attempts {}
 skill             recall  precision
 announce            nan%       nan%
-changelog           100%       100%
+changelog             0%       nan%
 pr-description        0%       nan%
 release-notes       nan%       nan%
-weekly-update         0%       nan%
+weekly-update       100%       100%
 confusion (expected -> picked):
+  changelog       -> (none)          x1
   pr-description  -> (none)          x1
-  weekly-update   -> (none)          x1
 miss classes: {'no_skill:first_tool=Bash': 2}
-latency_s median 4.5 (max 8.5); sdk cost/run $0.0176 (total $0.053)
+latency_s median 4.2 (max 10.1); sdk cost/run $0.0171 (total $0.051)
 ```
 
 Leave out `--ids` and `--reps` to run every case 3 times. That is 189 runs on 63 cases, about $3.50 as reported by the SDK. Results go to `.claude/hillclimb/skill-routing/<variant>/`.
@@ -236,6 +242,20 @@ index f8f598d..4405708 100644
  ---
  
  # Pull request description
+```
+
+Run the same request with the round-one descriptions:
+
+```bash
+for i in 1 2 3; do
+  .venv/bin/python scripts/which_skill.py "Summarize what this branch changes so the reviewer knows where to look."
+done
+```
+
+```
+{"skill": "pr-description", "first_tool": "Skill", "model": "claude-sonnet-5-5", "cost_usd": 0.0237912, "latency_s": 4.36}
+{"skill": "pr-description", "first_tool": "Skill", "model": "claude-sonnet-5-5", "cost_usd": 0.023095199999999996, "latency_s": 6.13}
+{"skill": "pr-description", "first_tool": "Skill", "model": "claude-sonnet-5-5", "cost_usd": 0.004517600000000001, "latency_s": 3.23}
 ```
 
 The other four descriptions follow the same pattern. The harder case sets are in the `look-alikes` and `between-two` tags ([video 10:58](https://youtu.be/VIDEO_ID?t=658)).
