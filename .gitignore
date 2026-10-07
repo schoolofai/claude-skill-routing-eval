@@ -1,2 +1,7 @@
 .venv
 __pycache__/
+**/traces/
+.claude/hillclimb/**/report.html
+.claude/hillclimb/**/trajectory/
+.claude/hillclimb/**/.harness_sha
+.claude/hillclimb/**/errors.jsonl

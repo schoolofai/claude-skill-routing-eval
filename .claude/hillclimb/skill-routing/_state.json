@@ -1,0 +1,17 @@
+{
+  "metrics": [
+    {"id": "correct", "label": "Correct", "kind": "binary"},
+    {"id": "recall", "label": "Recall", "kind": "binary"},
+    {"id": "specificity", "label": "Specificity", "kind": "binary"}
+  ],
+  "perf_fields": [
+    {"id": "latency_s", "label": "Latency", "unit": "s"},
+    {"id": "sdk_cost_usd", "label": "Cost (SDK)", "unit": "$"}
+  ],
+  "harness_paths": [
+    "scripts/eval_skill_routing.py",
+    "scripts/which_skill.py",
+    "requirements.txt",
+    ".claude/hillclimb/skill-routing/cases.jsonl"
+  ]
+}

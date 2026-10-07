@@ -1,0 +1,41 @@
+{"prompt_id": "c02", "prompt": "Support keeps asking what changed in the last version. Put together a summary they can send to customers.", "expected": "release-notes", "tags": ["release-notes", "real", "hard"]}
+{"prompt_id": "c03", "prompt": "I just fixed the retry bug in PR 88, log it so it shows up next release.", "expected": "changelog", "tags": ["changelog", "real", "medium"]}
+{"prompt_id": "c04", "prompt": "Summarize what this branch changes so the reviewer knows where to look.", "expected": "pr-description", "tags": ["pr-description", "real", "hard"]}
+{"prompt_id": "c05", "prompt": "What did we merge this week? Just a quick list for standup.", "expected": "weekly-update", "tags": ["weekly-update", "real", "hard"]}
+{"prompt_id": "c06", "prompt": "My manager wants to know what shipped since the last release, including the CI work.", "expected": "weekly-update", "tags": ["weekly-update", "real", "hard"]}
+{"prompt_id": "c07", "prompt": "Write something for our newsletter about 1.4 being out.", "expected": "announce", "tags": ["announce", "real", "medium"]}
+{"prompt_id": "c08", "prompt": "Bump the version to 1.4.0 and tag it.", "expected": "none", "tags": ["none", "real", "medium"]}
+{"prompt_id": "c09", "prompt": "Draft a LinkedIn post for the 1.4 launch.", "expected": "announce", "tags": ["announce", "synthetic", "easy"]}
+{"prompt_id": "c10", "prompt": "Write the blog intro for our 1.4 release, something upbeat.", "expected": "announce", "tags": ["announce", "synthetic", "easy"]}
+{"prompt_id": "c11", "prompt": "Need a tweet that gets people excited about the new version.", "expected": "announce", "tags": ["announce", "synthetic", "medium"]}
+{"prompt_id": "c12", "prompt": "Marketing wants a short blurb about what's new, for the newsletter.", "expected": "announce", "tags": ["announce", "synthetic", "hard"]}
+{"prompt_id": "c13", "prompt": "Write the release notes for 1.4.0.", "expected": "release-notes", "tags": ["release-notes", "synthetic", "easy"]}
+{"prompt_id": "c14", "prompt": "Draft what's new for customers, grouped into new, improved and fixed.", "expected": "release-notes", "tags": ["release-notes", "synthetic", "medium"]}
+{"prompt_id": "c15", "prompt": "We ship tomorrow. What should we tell users changed since v1.3.0?", "expected": "release-notes", "tags": ["release-notes", "synthetic", "medium"]}
+{"prompt_id": "c16", "prompt": "Customers need to know about the breaking changes in this version and what they have to do about them.", "expected": "release-notes", "tags": ["release-notes", "synthetic", "hard"]}
+{"prompt_id": "c17", "prompt": "Add an entry to the changelog for my branch.", "expected": "changelog", "tags": ["changelog", "synthetic", "easy"]}
+{"prompt_id": "c18", "prompt": "Record this under Unreleased: queue.pop() no longer raises on an empty queue. PR 91.", "expected": "changelog", "tags": ["changelog", "synthetic", "medium"]}
+{"prompt_id": "c19", "prompt": "We removed the legacy flush() API, note that in CHANGELOG.md.", "expected": "changelog", "tags": ["changelog", "synthetic", "medium"]}
+{"prompt_id": "c20", "prompt": "One-liner for the dev-facing log of this change, Added/Changed/Fixed style.", "expected": "changelog", "tags": ["changelog", "synthetic", "hard"]}
+{"prompt_id": "c21", "prompt": "Write the PR body for this branch.", "expected": "pr-description", "tags": ["pr-description", "synthetic", "easy"]}
+{"prompt_id": "c22", "prompt": "Draft the pull request description, include how it was tested.", "expected": "pr-description", "tags": ["pr-description", "synthetic", "easy"]}
+{"prompt_id": "c23", "prompt": "Reviewers keep missing the retry change. Write up what changed and where to start looking.", "expected": "pr-description", "tags": ["pr-description", "synthetic", "medium"]}
+{"prompt_id": "c24", "prompt": "I'm about to open a PR from these commits, can you write the text for it?", "expected": "pr-description", "tags": ["pr-description", "synthetic", "hard"]}
+{"prompt_id": "c25", "prompt": "Weekly update for the team please.", "expected": "weekly-update", "tags": ["weekly-update", "synthetic", "easy"]}
+{"prompt_id": "c26", "prompt": "Summarize what we worked on in the last 7 days, grouped by person.", "expected": "weekly-update", "tags": ["weekly-update", "synthetic", "medium"]}
+{"prompt_id": "c27", "prompt": "What did the team ship and refactor lately? It's for our internal sync.", "expected": "weekly-update", "tags": ["weekly-update", "synthetic", "hard"]}
+{"prompt_id": "c28", "prompt": "Status report for my manager on what landed since Monday.", "expected": "weekly-update", "tags": ["weekly-update", "synthetic", "hard"]}
+{"prompt_id": "c29", "prompt": "Cut a git tag v1.4.1 and push it.", "expected": "none", "tags": ["none", "synthetic", "medium"]}
+{"prompt_id": "c30", "prompt": "Fix the bug where queue.pop() raises on an empty queue.", "expected": "none", "tags": ["none", "synthetic", "easy"]}
+{"prompt_id": "c31", "prompt": "Add type hints to src/queue.py.", "expected": "none", "tags": ["none", "synthetic", "easy"]}
+{"prompt_id": "c32", "prompt": "What does the Queue class in src/queue.py do?", "expected": "none", "tags": ["none", "synthetic", "easy"]}
+{"prompt_id": "c33", "prompt": "Run the tests and tell me what fails.", "expected": "none", "tags": ["none", "synthetic", "easy"]}
+{"prompt_id": "c34", "prompt": "Merge PR 88 into main.", "expected": "none", "tags": ["none", "synthetic", "medium"]}
+{"prompt_id": "c35", "prompt": "Publish the package to PyPI.", "expected": "none", "tags": ["none", "synthetic", "medium"]}
+{"prompt_id": "c36", "prompt": "Pin claude-agent-sdk to the latest version in requirements.txt.", "expected": "none", "tags": ["none", "synthetic", "medium"]}
+{"prompt_id": "c37", "prompt": "Write a short poem about queues.", "expected": "none", "tags": ["none", "synthetic", "easy"]}
+{"prompt_id": "c38", "prompt": "Review my PR for bugs and style problems.", "expected": "none", "tags": ["none", "synthetic", "medium"]}
+{"prompt_id": "c39", "prompt": "Delete the merged branches and clean up the repo.", "expected": "none", "tags": ["none", "synthetic", "medium"]}
+{"prompt_id": "c40", "prompt": "What makes a good changelog, in general? I'm writing a blog post about it.", "expected": "none", "tags": ["none", "synthetic", "hard"]}
+{"prompt_id": "c41", "prompt": "Translate the README into Spanish.", "expected": "none", "tags": ["none", "synthetic", "easy"]}
+{"prompt_id": "c42", "prompt": "Bump the version to 1.5.0 and update the version string in the README.", "expected": "none", "tags": ["none", "synthetic", "hard"]}
