@@ -250,3 +250,63 @@ Translate the README into Spanish.
 ```
 Bump the version to 1.5.0 and update the version string in the README.
 ```
+
+## c43 → none  (user-written look-alike)
+```
+Show me last week's commits.
+```
+
+## c44 → none  (user-written look-alike)
+```
+What's in this diff? I just want to understand it before I touch anything.
+```
+
+## c45 → none  (user-written look-alike)
+```
+List the release tags we've published so far.
+```
+
+## c46 → none  (user-written look-alike)
+```
+When did the retry fix land? Find the commit.
+```
+
+## c47 → none  (user-written look-alike)
+```
+Fix the typo in the 1.3.0 heading of CHANGELOG.md.
+```
+
+## c48 → none  (user-written look-alike)
+```
+Why did the sync API break after the last release? Dig through the history.
+```
+
+## c49 → none  (user-written look-alike)
+```
+Write a docstring for Queue.pop.
+```
+
+## c50 → none  (user-written look-alike)
+```
+Who merged the most PRs this month?
+```
+
+## c51 → none  (user-written look-alike)
+```
+Give me a git alias that prints merges since the last tag.
+```
+
+## c52 → none  (user-written look-alike)
+```
+Did anything change in src/queue.py since v1.3.0?
+```
+
+## c53 → pr-description  (user-written look-alike)
+```
+Before Dana reviews, give her the lay of the land for this branch.
+```
+
+## c54 → release-notes  (user-written look-alike)
+```
+Users upgrading from 1.3 need to know what's different. Write that up.
+```

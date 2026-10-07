@@ -39,3 +39,15 @@
 {"prompt_id": "c40", "prompt": "What makes a good changelog, in general? I'm writing a blog post about it.", "expected": "none", "tags": ["none", "synthetic", "hard"]}
 {"prompt_id": "c41", "prompt": "Translate the README into Spanish.", "expected": "none", "tags": ["none", "synthetic", "easy"]}
 {"prompt_id": "c42", "prompt": "Bump the version to 1.5.0 and update the version string in the README.", "expected": "none", "tags": ["none", "synthetic", "hard"]}
+{"prompt_id": "c43", "prompt": "Show me last week's commits.", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c44", "prompt": "What's in this diff? I just want to understand it before I touch anything.", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c45", "prompt": "List the release tags we've published so far.", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c46", "prompt": "When did the retry fix land? Find the commit.", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c47", "prompt": "Fix the typo in the 1.3.0 heading of CHANGELOG.md.", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c48", "prompt": "Why did the sync API break after the last release? Dig through the history.", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c49", "prompt": "Write a docstring for Queue.pop.", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c50", "prompt": "Who merged the most PRs this month?", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c51", "prompt": "Give me a git alias that prints merges since the last tag.", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c52", "prompt": "Did anything change in src/queue.py since v1.3.0?", "expected": "none", "tags": ["none", "lookalike", "hard"]}
+{"prompt_id": "c53", "prompt": "Before Dana reviews, give her the lay of the land for this branch.", "expected": "pr-description", "tags": ["pr-description", "lookalike", "hard"]}
+{"prompt_id": "c54", "prompt": "Users upgrading from 1.3 need to know what's different. Write that up.", "expected": "release-notes", "tags": ["release-notes", "lookalike", "hard"]}
