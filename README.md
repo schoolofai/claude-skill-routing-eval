@@ -258,7 +258,7 @@ done
 {"skill": "pr-description", "first_tool": "Skill", "model": "claude-sonnet-5-5", "cost_usd": 0.004517600000000001, "latency_s": 3.23}
 ```
 
-The other four descriptions follow the same pattern. The harder case sets are in the `look-alikes` and `between-two` tags ([video 10:58](https://youtu.be/VIDEO_ID?t=658)).
+The other four descriptions follow the same pattern. The harder case sets are in the `look-alikes` and `between-two` tags ([video 10:59](https://youtu.be/VIDEO_ID?t=659)).
 
 ### 8. Run it on your own skills ([video 14:39](https://youtu.be/VIDEO_ID?t=879))
 
