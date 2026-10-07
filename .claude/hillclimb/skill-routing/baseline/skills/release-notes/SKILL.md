@@ -1,6 +1,6 @@
 ---
 name: release-notes
-description: "Writes customer-facing release notes for a version: what users should be told changed since a previous tag or release, including breaking changes and upgrade actions. Use this first, before running git commands to find tags or commits; it does that itself. Not for tweets, changelog entries, or internal reports."
+description: Writes release notes.
 ---
 
 # Release notes

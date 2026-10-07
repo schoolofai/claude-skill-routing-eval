@@ -1,0 +1,1 @@
+Analyzer finding (train only): all misses are Bash-first on indirect phrasings of git-history summarization (c04, c06 3/3; c11, c15 2/3). Terse descriptions don't say the skill reads git itself. Change: each description states deliverable, audience, indirect shapes, "use this first, before running git", plus "Not for" boundaries to protect 'none' cases (review/merge PR).

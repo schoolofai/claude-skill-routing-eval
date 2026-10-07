@@ -1,0 +1,60 @@
+diff --git a/.claude/skills/announce/SKILL.md b/.claude/skills/announce/SKILL.md
+index 1feea89..c14d260 100644
+--- a/.claude/skills/announce/SKILL.md
++++ b/.claude/skills/announce/SKILL.md
+@@ -1,6 +1,6 @@
+ ---
+ name: announce
+-description: Drafts announcements.
++description: "Drafts a short, upbeat public announcement of a new version for marketing channels (tweet/X post, LinkedIn post, blog intro, newsletter blurb), including requests to get people excited about a release. Use this first, before inspecting git history; it gathers what it needs. Not for release notes or changelogs."
+ ---
+ 
+ # Announcement
+diff --git a/.claude/skills/changelog/SKILL.md b/.claude/skills/changelog/SKILL.md
+index a333dc3..a78c419 100644
+--- a/.claude/skills/changelog/SKILL.md
++++ b/.claude/skills/changelog/SKILL.md
+@@ -1,6 +1,6 @@
+ ---
+ name: changelog
+-description: Updates the changelog.
++description: "Adds a single developer-facing entry to CHANGELOG.md under Unreleased (Added/Changed/Fixed/Removed, with PR number) when asked to record, note or log a change. Use this first, before editing the file. Not for release notes."
+ ---
+ 
+ # Changelog entry
+diff --git a/.claude/skills/pr-description/SKILL.md b/.claude/skills/pr-description/SKILL.md
+index f8f598d..4405708 100644
+--- a/.claude/skills/pr-description/SKILL.md
++++ b/.claude/skills/pr-description/SKILL.md
+@@ -1,6 +1,6 @@
+ ---
+ name: pr-description
+-description: Writes PR descriptions.
++description: "Writes the pull request body for the current branch (what changed, why, testing, where the reviewer should look first), including requests to summarize a branch for a reviewer. Use this first, before running git commands; it reads the diff itself. Not for reviewing a PR, merging, or code changes."
+ ---
+ 
+ # Pull request description
+diff --git a/.claude/skills/release-notes/SKILL.md b/.claude/skills/release-notes/SKILL.md
+index bd96944..78f4440 100644
+--- a/.claude/skills/release-notes/SKILL.md
++++ b/.claude/skills/release-notes/SKILL.md
+@@ -1,6 +1,6 @@
+ ---
+ name: release-notes
+-description: Writes release notes.
++description: "Writes customer-facing release notes for a version: what users should be told changed since a previous tag or release, including breaking changes and upgrade actions. Use this first, before running git commands to find tags or commits; it does that itself. Not for tweets, changelog entries, or internal reports."
+ ---
+ 
+ # Release notes
+diff --git a/.claude/skills/weekly-update/SKILL.md b/.claude/skills/weekly-update/SKILL.md
+index cef69c0..f49f7bf 100644
+--- a/.claude/skills/weekly-update/SKILL.md
++++ b/.claude/skills/weekly-update/SKILL.md
+@@ -1,6 +1,6 @@
+ ---
+ name: weekly-update
+-description: Summarizes recent work.
++description: "Summarizes what the team merged and worked on over a recent period (last 7 days, since the last release) for an internal audience: standup, weekly update, manager or status report, including internal work like CI and refactors, grouped by person or area. Use this first, before running git log; it gathers the history itself. Not customer-facing."
+ ---
+ 
+ # Weekly team update

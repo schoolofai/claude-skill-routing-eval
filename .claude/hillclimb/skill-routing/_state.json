@@ -1,17 +1,99 @@
 {
   "metrics": [
-    {"id": "correct", "label": "Correct", "kind": "binary"},
-    {"id": "recall", "label": "Recall", "kind": "binary"},
-    {"id": "specificity", "label": "Specificity", "kind": "binary"}
+    {
+      "id": "correct",
+      "label": "Correct",
+      "kind": "binary"
+    },
+    {
+      "id": "recall",
+      "label": "Recall",
+      "kind": "binary"
+    },
+    {
+      "id": "specificity",
+      "label": "Specificity",
+      "kind": "binary"
+    }
   ],
   "perf_fields": [
-    {"id": "latency_s", "label": "Latency", "unit": "s"},
-    {"id": "sdk_cost_usd", "label": "Cost (SDK)", "unit": "$"}
+    {
+      "id": "latency_s",
+      "label": "Latency",
+      "unit": "s"
+    },
+    {
+      "id": "sdk_cost_usd",
+      "label": "Cost (SDK)",
+      "unit": "$"
+    }
   ],
   "harness_paths": [
     "scripts/eval_skill_routing.py",
     "scripts/which_skill.py",
     "requirements.txt",
     ".claude/hillclimb/skill-routing/cases.jsonl"
-  ]
+  ],
+  "train_ids": [
+    "c04",
+    "c06",
+    "c11",
+    "c12",
+    "c15",
+    "c16",
+    "c18",
+    "c19",
+    "c24",
+    "c26",
+    "c28",
+    "c30",
+    "c31",
+    "c32",
+    "c33",
+    "c34",
+    "c37",
+    "c38",
+    "c41"
+  ],
+  "test_ids": [
+    "c02",
+    "c03",
+    "c05",
+    "c07",
+    "c08",
+    "c09",
+    "c10",
+    "c13",
+    "c14",
+    "c17",
+    "c20",
+    "c21",
+    "c22",
+    "c23",
+    "c25",
+    "c27",
+    "c29",
+    "c35",
+    "c36",
+    "c39",
+    "c40",
+    "c42"
+  ],
+  "current_round": 1,
+  "reps": 3,
+  "approve_each_round": false,
+  "goal": {
+    "target": "correct",
+    "direction": "higher",
+    "hold": [
+      "recall",
+      "specificity",
+      "sdk_cost_usd"
+    ]
+  },
+  "best": {
+    "round": 1,
+    "test_score": 1.0
+  },
+  "split_seed": 20261007
 }

@@ -1,6 +1,6 @@
 ---
 name: changelog
-description: "Adds a single developer-facing entry to CHANGELOG.md under Unreleased (Added/Changed/Fixed/Removed, with PR number) when asked to record, note or log a change. Use this first, before editing the file. Not for release notes."
+description: Updates the changelog.
 ---
 
 # Changelog entry
