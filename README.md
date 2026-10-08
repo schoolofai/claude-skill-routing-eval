@@ -1,8 +1,8 @@
 # Claude build-eval and hillclimb - Start Using it
 
-[![Watch the video](docs/thumbnail.png)](https://youtu.be/VIDEO_ID)
+[![Watch the video](docs/thumbnail.png)](https://youtu.be/uObjfDNnjNE)
 
-**Video:** https://youtu.be/VIDEO_ID
+**Video:** https://youtu.be/uObjfDNnjNE
 
 This repo has everything from the video: five Claude Code skills whose jobs overlap, the routing eval that `/claude-api build-eval` built for them, and the one round of `/claude-api hillclimb` that took routing from **86.2% to 100%**.
 
@@ -54,7 +54,7 @@ python3 -m venv .venv
 
 `requirements.txt` pins a single package, `claude-agent-sdk==0.2.164`.
 
-### 2. Ask which skill fires ([video 2:07](https://youtu.be/VIDEO_ID?t=127))
+### 2. Ask which skill fires ([video 2:07](https://youtu.be/uObjfDNnjNE?t=127))
 
 `scripts/which_skill.py` sends one request and reports the first skill Claude picks. It allows one model turn, and every tool except Skill is denied, so nothing runs:
 
@@ -80,7 +80,7 @@ opts = ClaudeAgentOptions(
 
 These are the round-one descriptions, so both requests reach the right skill.
 
-### 3. Put the original descriptions back and watch it miss ([video 2:35](https://youtu.be/VIDEO_ID?t=155))
+### 3. Put the original descriptions back and watch it miss ([video 2:35](https://youtu.be/uObjfDNnjNE?t=155))
 
 The original descriptions are saved in `.claude/hillclimb/skill-routing/baseline/skills/`. Here is one of them:
 
@@ -108,7 +108,7 @@ No skill fired in any of the three runs. Each time, Claude's first move was a sh
 
 A single request is only an anecdote. In the filmed baseline, the standup request from the video missed 3 times out of 3. In our fresh-clone test it picked the right skill 4 times out of 4. That is why the eval runs every case 3 times.
 
-### 4. Check the grader before trusting it ([video 5:24](https://youtu.be/VIDEO_ID?t=324))
+### 4. Check the grader before trusting it ([video 5:24](https://youtu.be/uObjfDNnjNE?t=324))
 
 The grader is plain code with an exact match and no judge model (`scripts/eval_skill_routing.py`):
 
@@ -141,7 +141,7 @@ oracle/null on 63 cases
   well-formed attempt -> row + trace written  OK
 ```
 
-### 5. Approve the harness and run a pilot ([video 6:17](https://youtu.be/VIDEO_ID?t=377))
+### 5. Approve the harness and run a pilot ([video 6:17](https://youtu.be/uObjfDNnjNE?t=377))
 
 The runner won't run until you approve it. `--approve-harness` records a hash of the runner, `which_skill.py`, `requirements.txt` and `cases.jsonl`. If any of them changes, you have to approve again. The original descriptions from step 3 are still in place:
 
@@ -172,7 +172,7 @@ latency_s median 4.2 (max 10.1); sdk cost/run $0.0171 (total $0.051)
 
 Leave out `--ids` and `--reps` to run every case 3 times. That is 189 runs on 63 cases, about $3.50 as reported by the SDK. Results go to `.claude/hillclimb/skill-routing/<variant>/`.
 
-### 6. Read the scores from the video ([video 7:05](https://youtu.be/VIDEO_ID?t=425))
+### 6. Read the scores from the video ([video 7:05](https://youtu.be/uObjfDNnjNE?t=425))
 
 Both full runs are saved, so `--summary` can recompute them without any model calls:
 
@@ -216,7 +216,7 @@ latency_s median 3.4 (max 15.4); sdk cost/run $0.0179 (total $3.386)
 
 The `none -> code-review` line is the bundled code-review skill answering "Review my PR for bugs and style problems." The grader counts a skill outside our five as "none". That grading rule was changed on camera, before any tuning.
 
-### 7. See what hillclimb changed ([video 9:43](https://youtu.be/VIDEO_ID?t=583))
+### 7. See what hillclimb changed ([video 9:43](https://youtu.be/uObjfDNnjNE?t=583))
 
 `.claude/hillclimb/skill-routing/v1/change.md` explains the change:
 
@@ -258,9 +258,9 @@ done
 {"skill": "pr-description", "first_tool": "Skill", "model": "claude-sonnet-5-5", "cost_usd": 0.004517600000000001, "latency_s": 3.23}
 ```
 
-The other four descriptions follow the same pattern. The harder case sets are in the `look-alikes` and `between-two` tags ([video 10:59](https://youtu.be/VIDEO_ID?t=659)).
+The other four descriptions follow the same pattern. The harder case sets are in the `look-alikes` and `between-two` tags ([video 10:59](https://youtu.be/uObjfDNnjNE?t=659)).
 
-### 8. Run it on your own skills ([video 14:39](https://youtu.be/VIDEO_ID?t=879))
+### 8. Run it on your own skills ([video 14:39](https://youtu.be/uObjfDNnjNE?t=879))
 
 In your own repo, inside Claude Code:
 
@@ -270,8 +270,8 @@ claude update
 /claude-api hillclimb
 ```
 
-- `build-eval` asks you questions, drafts cases around 5 to 10 real requests that went wrong, and writes a runner and grader. It stops for you to approve the harness ([video 2:49](https://youtu.be/VIDEO_ID?t=169)).
-- `hillclimb` asks for a goal, the scope it may change and a held-out split, then runs one round at a time ([video 8:24](https://youtu.be/VIDEO_ID?t=504)).
+- `build-eval` asks you questions, drafts cases around 5 to 10 real requests that went wrong, and writes a runner and grader. It stops for you to approve the harness ([video 2:49](https://youtu.be/uObjfDNnjNE?t=169)).
+- `hillclimb` asks for a goal, the scope it may change and a held-out split, then runs one round at a time ([video 8:24](https://youtu.be/uObjfDNnjNE?t=504)).
 - When you hit 100%, make the eval harder before you believe it.
 
 ## Limits
